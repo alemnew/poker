@@ -1,6 +1,6 @@
 # poker
 
-A simplified version of poker game. 
+A simplified version of [poker](https://en.wikipedia.org/wiki/Poker) game. Given two poker hands determine which one wins. The program assumes that the cards don't have suits and there are no flushes, straights, and straight flushes.
 
 # Code structure 
 
