@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
-"""A simplified version of poker game."""
+"""A simplified version of poker game. The program assumes that the cards 
+don't have suits and there are no flushes, straights, and straight flushes.
+"""
 
 # Copyright (c) 2019 Alemnew Sheferaw Asrese 
 #
@@ -30,58 +32,56 @@ import lib_poker as util
 
 
 def get_winer_same_combination(hand_1, hand_2, combination_type):
-    '''Find the winner between two sets of cards of the same combination_type.
+    '''Determine the winner between two sets of cards of the 
+    same combination_type.
+    return: the winner player.
+        0: it is a tie
+        1: first hand wins 
+        2: second hand wins
+        -1: fail
     ''' 
     
     all_cards_1 = util.order_cards_by_value([c for c in hand_1])
     all_cards_2 = util.order_cards_by_value([c for c in hand_2])
     
     winner = -1
-    # both hands contain high cards
-    if combination_type == 1: 
+    if combination_type == 1:   
+        # both hands contain high cards
         winner = util.get_winner_in_high_card(all_cards_1, all_cards_2)
-        #print_winner_message(winner)
-        
-    # both hands contain pair
     elif combination_type == 2:
+        # both hands contain pair
         winner = util.get_winner_in_pairs(all_cards_1, all_cards_2)
-        #print_winner_message(winner)
-
-    # both hands contain two pairs
     elif combination_type == 3:
+        # both hands contain two pairs
         winner = util.get_winner_in_two_pairs(all_cards_1, all_cards_2)
-        #print_winner_message(winner)
-
-    # both hands contain triples
     elif combination_type == 4:
+        # both hands contain triples
         winner = util.get_winner_in_triples(all_cards_1, all_cards_2)
-        #print_winner_message(winner)
-
-    # both hands contain full house
     elif combination_type == 5:
+        # both hands contain full house
         winner = util.get_winner_in_full_house(all_cards_1, all_cards_2)
-        #print_winner_message(winner)
-
-    # both hands contain four of a kind
     elif combination_type == 6:
-        winner = util.get_winner_in_four_a_kind(all_cards_1, all_cards_2)
-        #print_winner_message(winner)
-    
-    # either of the hands may contain invalid card as an input
+        # both hands contain four of a kind
+        winner = util.get_winner_in_four_a_kind(all_cards_1, all_cards_2)  
     else:
+        # either of the hands may contain invalid card as an input
         winner = -1
 
     return(winner)
         
 
 def who_wins(hand_1, hand_2):
-    ''' Determine the winner of the two hands 
+    ''' Determine the winner of the two poker hands 
      input: cards in the first hand and the second hand 
-     -- determine combination type
-     -- check the valuable combination
-     -- in case of hard, check the higher card 
+     return: the winner player.
+        0: it is a tie
+        1: first hand wins 
+        2: second hand wins
+        -1: fail
      '''
     
+    # if any of the poker hand does not contain 5 cards, 
+    # or illegal characters, retrun error. 
     if len(hand_1) != 5 or len(hand_2) != 5 or \
             not set(hand_1).issubset(util.CARD_SET) or \
             not set(hand_2).issubset(util.CARD_SET):
@@ -92,16 +92,10 @@ def who_wins(hand_1, hand_2):
     
     winner = -1
     
-    # hands contain illegal combination of cards 
-    if hand_1_type not in range(1,7) or hand_1_type not in range(1, 7):
-        return(-1)
-
-    # case 1: simple scenario - the hands contain different combination type. 
     if hand_1_type > hand_2_type:
-        #print_winner_message(1)
+        # simple scenario - the hands contain different combination type. 
         winner = 1
     elif hand_1_type < hand_2_type:
-        #print_winner_message(2)
         winner = 2
     else: 
         # similar combination type

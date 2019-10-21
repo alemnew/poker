@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
-"""A test code for the simplified version of the poker game."""
+"""A test code for the simplified version of the poker game. 
+The program assumes that the cards don't have suits and there are 
+no flushes, straights, and straight flushes.
+"""
 
 # Copyright (c) 2019 Alemnew Sheferaw Asrese
 #

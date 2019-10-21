@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 # encoding: utf-8
 
-"""A support library for a simplified version of poker game."""
+"""A support library for a simplified version of poker game. The program assumes
+ that the cards don't have suits and there are no flushes, straights, and 
+ straight flushes.
+ """
 
 # Copyright (c) 2019 Alemnew Sheferaw Asrese
 #
@@ -276,6 +279,11 @@ def get_winner_in_pairs(all_cards_1, all_cards_2):
 
 def get_winner_in_two_pairs(all_cards_1, all_cards_2):
     ''' Find the winner in a two pairs combination
+    return: the winner player.
+        0: it is a tie
+        1: first hand wins 
+        2: second hand wins
+        -1: fail
     '''
 
     hand_1_pairs = get_repeated_card(all_cards_1, 2)
@@ -306,7 +314,12 @@ def get_winner_in_two_pairs(all_cards_1, all_cards_2):
 
 
 def get_winner_in_triples(all_cards_1, all_cards_2):
-    ''' Find the winner in a triples combination
+    ''' Find the winner in a triples combination.
+    return: the winner player.
+        0: it is a tie
+        1: first hand wins 
+        2: second hand wins
+        -1: fail
     '''
     
     hand_1_triples = get_repeated_card(all_cards_1, 3)
@@ -327,7 +340,12 @@ def get_winner_in_triples(all_cards_1, all_cards_2):
         return(winner)
 
 def get_winner_in_full_house(all_cards_1, all_cards_2):
-    ''' Find the winner in a full house  combination
+    ''' Find the winner in a full house  combination.
+    return: the winner player.
+        0: it is a tie
+        1: first hand wins 
+        2: second hand wins
+        -1: fail
     '''
     
     hand_1_triples = get_repeated_card(all_cards_1, 3)
@@ -353,7 +371,12 @@ def get_winner_in_full_house(all_cards_1, all_cards_2):
     return(-1)
 
 def get_winner_in_four_a_kind(all_cards_1, all_cards_2):
-    ''' Find the winner in a four of a kind combination
+    ''' Find the winner in a four of a kind combination.
+    return: the winner player.
+        0: it is a tie
+        1: first hand wins 
+        2: second hand wins
+        -1: fail
     '''
     
     hand_1_fours = get_repeated_card(all_cards_1, 4)
