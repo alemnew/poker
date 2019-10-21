@@ -229,7 +229,7 @@ def order_cards_by_value(cards):
 def get_winner_in_high_card(all_cards_1, all_cards_2):
     ''' Find the winner from high card combination.
     input: lists of high to low ordered cards
-    return: the winner player.
+    return: the winner poker hand.
         0: it is a tie
         1: first hand wins 
         2: second hand wins
@@ -253,7 +253,7 @@ def get_winner_in_high_card(all_cards_1, all_cards_2):
 def get_winner_in_pairs(all_cards_1, all_cards_2):
     ''' Find the winner from a pairs combination.
     input: lists of cards
-    return: the winner player.
+    return: the winner poker hand.
         0: it is a tie
         1: first hand wins 
         2: second hand wins
@@ -279,7 +279,7 @@ def get_winner_in_pairs(all_cards_1, all_cards_2):
 
 def get_winner_in_two_pairs(all_cards_1, all_cards_2):
     ''' Find the winner in a two pairs combination
-    return: the winner player.
+    return: the winner poker hand.
         0: it is a tie
         1: first hand wins 
         2: second hand wins
@@ -315,7 +315,7 @@ def get_winner_in_two_pairs(all_cards_1, all_cards_2):
 
 def get_winner_in_triples(all_cards_1, all_cards_2):
     ''' Find the winner in a triples combination.
-    return: the winner player.
+    return: the winner poker hand.
         0: it is a tie
         1: first hand wins 
         2: second hand wins
@@ -341,7 +341,7 @@ def get_winner_in_triples(all_cards_1, all_cards_2):
 
 def get_winner_in_full_house(all_cards_1, all_cards_2):
     ''' Find the winner in a full house  combination.
-    return: the winner player.
+    return: the winner poker hand.
         0: it is a tie
         1: first hand wins 
         2: second hand wins
@@ -372,7 +372,7 @@ def get_winner_in_full_house(all_cards_1, all_cards_2):
 
 def get_winner_in_four_a_kind(all_cards_1, all_cards_2):
     ''' Find the winner in a four of a kind combination.
-    return: the winner player.
+    return: the winner poker hand.
         0: it is a tie
         1: first hand wins 
         2: second hand wins

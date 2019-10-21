@@ -18,4 +18,10 @@ To run the poker game follow these stepts:
     - `./poker.py {hand_1} {hand_2}` where `hand_1` and `hand_2` contain a string of five characters, where each character is one of `23456789TJQKA`. 
 4. Output
     - Unpon a sucessful execution of the program, it answers `First hand wins!`, `Second hand wins!` or `It's a tie!`. If the user inputs illegal set of cards, that is, any character other that `23456789TJQKA`, the program prints error message and stops execution. 
+5. Examples: 
+    - `./poker.py AAAQQ QQQAA` answers `First hand wins!`
+    - `./poker.py QQQAA AAAQQ` answers `Second hand wins!`
+    - `./poker.py AAAQQ QQAAA` answers `It's a tie!`
+
+    
 

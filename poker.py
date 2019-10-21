@@ -34,7 +34,7 @@ import lib_poker as util
 def get_winer_same_combination(hand_1, hand_2, combination_type):
     '''Determine the winner between two sets of cards of the 
     same combination_type.
-    return: the winner player.
+    return: the winner poker hand.
         0: it is a tie
         1: first hand wins 
         2: second hand wins
@@ -73,7 +73,7 @@ def get_winer_same_combination(hand_1, hand_2, combination_type):
 def who_wins(hand_1, hand_2):
     ''' Determine the winner of the two poker hands 
      input: cards in the first hand and the second hand 
-     return: the winner player.
+    return: the winner poker hand.
         0: it is a tie
         1: first hand wins 
         2: second hand wins
