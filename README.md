@@ -9,7 +9,7 @@ A simplified version of [poker](https://en.wikipedia.org/wiki/Poker) game. Given
 - [test_poker.py](test_poker.py) contains test cases for the poker game. 
 
 # How run it? 
-The program is developed for python version 3.  If you system does not have python3 installed, please install it from [python3](https://www.python.org/downloads/). 
+The program is developed for python version 3.  If your system does not have python3 installed, please install it from [python3](https://www.python.org/downloads/). 
 To run the poker game follow these stepts:
 1. Clone the code to your machine
     - `git clone https://gitlab.com/alemnew/poker.git`
